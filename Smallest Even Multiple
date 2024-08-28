@@ -1,0 +1,21 @@
+class Solution {
+    public int smallestEvenMultiple(int n) {
+        int k=0;
+        if(n==1)
+        {
+            k=2;
+        }
+        else
+        {
+            for(int i=1;i<=n;i++)
+            {
+                if((n*i)%2==0)
+                {
+                    k=n*i;
+                    break;
+                }
+            }
+        }
+        return k;
+    }
+}
