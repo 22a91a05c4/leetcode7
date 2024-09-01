@@ -1,0 +1,28 @@
+class Solution {
+    public int[] rowAndMaximumOnes(int[][] mat) {
+        int[] arr = new int[2];
+        int sizer=mat.length;
+        int sizec=mat[0].length;
+        int c=0;
+        int rr=0;
+        for(int i=0;i<sizer;i++)
+        {
+            int k=0;
+            for(int j=0;j<sizec;j++)
+            {
+                if(mat[i][j]==1)
+                {
+                    k++;
+                }
+            }
+            if(k>c)
+            {
+                c=k;
+                rr=i;
+            }
+        }
+        arr[0]=rr;
+        arr[1]=c;
+        return arr;
+    }
+}
