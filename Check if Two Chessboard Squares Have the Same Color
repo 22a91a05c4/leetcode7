@@ -1,0 +1,56 @@
+class Solution {
+    public boolean checkTwoChessboards(String coordinate1, String coordinate2) {
+        int t1=0;
+        if(coordinate1.contains("a")||coordinate1.contains("c")||coordinate1.contains("e")||coordinate1.contains("g"))
+        {
+            if(coordinate1.contains("1")||coordinate1.contains("3")||coordinate1.contains("5")||coordinate1.contains("7"))
+            {
+                t1++;
+            }
+            else
+            {
+                t1--;
+            }
+        }
+        else{
+            if(coordinate1.contains("2")||coordinate1.contains("4")||coordinate1.contains("6")||coordinate1.contains("8"))
+            {
+                t1++;
+            }
+            else
+            {
+                t1--;
+            }
+        }
+        int t2=0;
+        if(coordinate2.contains("a")||coordinate2.contains("c")||coordinate2.contains("e")||coordinate2.contains("g"))
+        {
+            if(coordinate2.contains("1")||coordinate2.contains("3")||coordinate2.contains("5")||coordinate2.contains("7"))
+            {
+                t2++;
+            }
+            else
+            {
+                t2--;
+            }
+        }
+        else{
+            if(coordinate2.contains("2")||coordinate2.contains("4")||coordinate2.contains("6")||coordinate2.contains("8"))
+            {
+                t2++;
+            }
+            else
+            {
+                t2--;
+            }
+        }
+        if(t1==t2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
