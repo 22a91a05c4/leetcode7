@@ -1,0 +1,31 @@
+class Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        ArrayList<Integer> arr1 = new ArrayList<>();
+        ArrayList<Integer> arr2 = new ArrayList<>();
+        ArrayList<Integer> play = new ArrayList<>();
+        for(int i : nums1)
+        {
+            arr1.add(i);
+        }
+        for(int i : nums2)
+        {
+            arr2.add(i);
+        }
+        for(int i : arr1)
+        {
+            if(arr2.contains(i)==true)
+            {
+                play.add(i);
+            }
+        }
+        HashSet<Integer> set = new HashSet<>(play);
+        play.clear();
+        play.addAll(set);
+        int[] hii = new int[play.size()];
+        for(int i=0;i<play.size();i++)
+        {
+            hii[i]=play.get(i);
+        }
+        return hii;
+    }
+}
