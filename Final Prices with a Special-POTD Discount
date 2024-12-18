@@ -1,0 +1,30 @@
+class Solution {
+    public int[] finalPrices(int[] prices) {
+        int n = prices.length;
+        int[] dis = new int[n];
+        int t = 0;
+        for(int i=0;i<n;i++)
+        {
+            int g=0;
+            for(int j=i+1;j<n;j++)
+            {
+                if(prices[i]>=prices[j])
+                {
+                    dis[t]=prices[i]-prices[j];
+                    t++;
+                    break;
+                }
+                else
+                {
+                    g++;
+                }
+            }
+            if(n-(i+1)==g)
+            {
+                dis[t]=prices[i];
+                t++;
+            }
+        }
+        return dis;
+    }
+}
