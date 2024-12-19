@@ -1,0 +1,27 @@
+class Solution
+{
+    public boolean wordPattern(String pattern, String s) 
+    {
+        HashMap<Character,String> hasha = new HashMap<Character,String>();
+        Set<String> hash_set = new HashSet<>();
+        int l = pattern.length();
+        String[] arr = s.split(" ");
+        if(l!=arr.length)
+        {
+            return false;
+        }
+        for(int i=0;i<l;i++)
+        {
+            char c = pattern.charAt(i);
+            String w = arr[i];
+            if (hasha.containsKey(c)) {
+                if (!hasha.get(c).equals(w)) {
+                    return false;}
+            } else {
+                if (hash_set.contains(w)) {
+                    return false;}
+                hasha.put(c, w);
+                hash_set.add(w);}}
+        return true;
+    }
+}
