@@ -1,0 +1,24 @@
+class Solution {
+    public int[] numberGame(int[] nums) {
+        int[] arr = new int[nums.length];
+        ArrayList<Integer> nmb = new ArrayList<Integer>();
+        int al,bb;
+        int i=0;
+        for(int k : nums)
+        {
+            nmb.add(k);
+        }
+        while(nmb.size()!=0)
+        {
+            al=Collections.min(nmb);
+            nmb.remove(Integer.valueOf(al));
+            bb=Collections.min(nmb);
+            nmb.remove(Integer.valueOf(bb));
+            arr[i]=bb;
+            i++;
+            arr[i]=al;
+            i++;
+        }
+        return arr;
+    }
+}
