@@ -1,0 +1,15 @@
+class Solution {
+    public String convertDateToBinary(String date) {
+        String[] stl = date.split("-");
+        String[] ans = new String[stl.length];
+        int k=0;
+        for(String i : stl)
+        {
+            int num = Integer.parseInt(i);
+            ans[k]=Integer.toBinaryString(num);
+            k++;
+        }
+        String res = String.join("-",ans);
+        return res;
+    }
+}
