@@ -1,6 +1,6 @@
 class Solution {
     public boolean isStrictlyPalindromic(int n) {
-        int c=0;
+        /*int c=0;
         int ans=0;
         for (int i = 2; i <= n - 2; i++) {
             int temp = n;
@@ -14,6 +14,7 @@ class Solution {
             }
         }
 
-        return c == (n - 2);
+        return c == (n - 2);*/
+        return false;
     }
 }
