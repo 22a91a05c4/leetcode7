@@ -15,13 +15,6 @@ class Solution {
                 b++;
             }
         }
-        if(a>b)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return a>b;
     }
 }
