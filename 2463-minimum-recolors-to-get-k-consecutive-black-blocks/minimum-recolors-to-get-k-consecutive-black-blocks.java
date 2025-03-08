@@ -1,7 +1,7 @@
 class Solution {
     public int minimumRecolors(String blocks, int k) {
-        ArrayList<Integer> al = new ArrayList<Integer>();
-        int count=0;
+        //ArrayList<Integer> al = new ArrayList<Integer>();
+        int min=Integer.MAX_VALUE;
         for(int i=0;i<=blocks.length()-k;i++)
         {
             int s=0;
@@ -13,10 +13,12 @@ class Solution {
                     s++;
                 }
             }
-            al.add(s);
+            //al.add(s);
+            min=Math.min(s,min);
         }
-        Collections.sort(al);
-        int ans=al.get(0);
-        return ans;
+        //Collections.sort(al);
+        //int ans=al.get(0);
+        //return ans;
+        return min;
     }
 }
