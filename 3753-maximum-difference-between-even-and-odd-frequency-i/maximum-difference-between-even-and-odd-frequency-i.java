@@ -13,6 +13,7 @@ class Solution {
             {
                 hm.put(ch,1);
             }
+            //hm.put(ch,hm.getOrDefault(ch,0)+1);
         }
         //System.out.println(hm);
         for(Map.Entry<Character,Integer> i : hm.entrySet())
