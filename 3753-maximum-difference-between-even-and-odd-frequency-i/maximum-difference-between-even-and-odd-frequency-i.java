@@ -14,7 +14,7 @@ class Solution {
                 hm.put(ch,1);
             }
         }
-        System.out.println(hm);
+        //System.out.println(hm);
         for(Map.Entry<Character,Integer> i : hm.entrySet())
         {
             if(i.getValue()%2==0)
@@ -31,7 +31,7 @@ class Solution {
         }
         int maxf=Collections.max(odd);
         int minf=Collections.min(even);
-        System.out.println(maxf+" "+minf);
+        //System.out.println(maxf+" "+minf);
         return (maxf-minf);
     }
 }
