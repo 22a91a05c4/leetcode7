@@ -1,3 +1,4 @@
+//   option-1
 // class Solution {
 //     public boolean containsDuplicate(int[] nums) {
 //         Arrays.sort(nums);
@@ -12,6 +13,7 @@
 //     }
 // }
 
+//    option-2
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         HashSet<Integer> hs = new HashSet<Integer>();
