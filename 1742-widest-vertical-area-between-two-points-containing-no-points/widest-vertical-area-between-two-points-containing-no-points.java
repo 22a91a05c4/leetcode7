@@ -9,11 +9,12 @@ class Solution {
         int max=0;
         for(int i=0;i<al.size()-1;i++)
         {
-            int temp=al.get(i+1)-al.get(i);
+            /*int temp=al.get(i+1)-al.get(i);
             if(max<temp)
             {
                 max=temp;
-            }
+            }*/
+            max=Math.max(max,al.get(i+1)-al.get(i));
         }
         return max;
     }
